@@ -27,10 +27,10 @@ This repository is organized into the following sections:
 | **04_SQL_Validation** | Sample SQL validation queries for data integrity checks. |
 
 ## Tools & Technologies
-*   **Test Management:** Jira, TestRail, Azure DevOps
+*   **Test Management:** Jira, TestRail
 *   **API Testing:** Postman, Swagger
 *   **Database:** SQL (PostgreSQL/MySQL), DBeaver
-*   **Methodologies:** Agile (Scrum/Kanban), Waterfall
+*   **Methodologies:** Agile (Scrum)
 
 ---
 *Note: This portfolio is a demonstration of skills and does not contain proprietary data from actual clients.*
