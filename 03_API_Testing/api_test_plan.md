@@ -25,7 +25,6 @@ Validate the integrity, performance, and security of the RESTful API endpoints u
 
 ### 3.3 Security Testing
 *   Verify no sensitive data (passwords, PII) is returned in API responses.
-*   Verify rate limiting (basic check).
 
 ## 4. Entry & Exit Criteria
 *   **Entry:** API Spec (Swagger) is frozen; Environment is deployed.
