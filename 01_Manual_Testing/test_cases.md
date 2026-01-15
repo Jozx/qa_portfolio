@@ -5,10 +5,10 @@
 
 ---
 
-## Section: Sanity / Smoke Cases
+## Section: Smoke Testing (Build Verification)
 
 ### [C101] Verify Login Page Loads
-**Type:** Sanity | **Priority:** Critical | **Estimate:** 3m | **Refs:** JIRA-101
+**Type:** Smoke | **Priority:** Critical | **Refs:** JIRA-101
 
 **Preconditions:**
 1. Browser is open (Chrome/Edge latest).
@@ -24,7 +24,7 @@
 ---
 
 ### [C102] Verify Dashboard Access (Admin)
-**Type:** Sanity | **Priority:** Critical | **Estimate:** 2m | **Refs:** requirements.md#AC1
+**Type:** Smoke | **Priority:** Critical | **Refs:** requirements.md#AC1
 
 **Preconditions:**
 1. Login page is loaded.
@@ -42,7 +42,7 @@
 ## Section: Functional - Vendor Registration
 
 ### [C201] Create New Vendor - Happy Path
-**Type:** Functional | **Priority:** High | **Estimate:** 10m | **Refs:** STORY-205
+**Type:** Functional | **Priority:** High | **Refs:** STORY-205
 
 **Preconditions:**
 1. Logged in as `Procurement Officer`.
@@ -60,7 +60,7 @@
 ---
 
 ### [C202] Validate Duplicate Tax ID
-**Type:** Functional | **Priority:** Medium | **Estimate:** 5m | **Refs:** STORY-205
+**Type:** Functional | **Priority:** High | **Refs:** STORY-205
 
 **Preconditions:**
 1. Logged in as `Procurement Officer`.
@@ -79,7 +79,7 @@
 ## Section: Functional - Contract Search
 
 ### [C305] Search by Vendor Name (Partial Match)
-**Type:** Functional | **Priority:** High | **Estimate:** 5m | **Refs:** STORY-310
+**Type:** Functional | **Priority:** High | **Refs:** STORY-310
 
 **Preconditions:**
 1. Logged in as `Contract Manager`.
