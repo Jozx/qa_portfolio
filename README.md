@@ -3,7 +3,7 @@
 ## Introduction
 Welcome to my QA Portfolio. I am a QA Engineer with ~7 years of experience specializing in web-based systems, primarily within consulting and government sectors. My expertise lies in ensuring software quality through rigorous manual testing, structured functionality verification, and database validation in agile, distributed environments.
 
-This repository demonstrates my work methodology, test planning, and defect reporting standards.
+This repository demonstrates my work methodology, test planning, defect reporting standards, and automation engineering skills.
 
 ## Project Context: GovTech Vendor Management Portal (Fictional)
 To respect the confidentiality of my previous clients, I have created artifacts based on a fictional system called **"GovTech Vendor Management Portal"**.
@@ -25,12 +25,19 @@ This repository is organized into the following sections:
 | **02_Bug_Reports** | Examples of high-quality, actionable bug reports. |
 | **03_API_Testing** | API test planning and validation examples (REST). |
 | **04_SQL_Validation** | Sample SQL validation queries for data integrity checks. |
+| **05_Automation** | End-to-end automation suite built with Playwright + TypeScript |
 
 ## Tools & Technologies
 *   **Test Management:** Jira, TestRail
 *   **API Testing:** Postman, Swagger
 *   **Database:** SQL (PostgreSQL/MySQL), DBeaver
 *   **Methodologies:** Agile (Scrum)
+
+**Automation**
+- Framework: Playwright
+- Language: TypeScript
+- CI/CD: GitHub Actions (in progress)
+- Reporting: Playwright HTML Reporter
 
 ---
 *Note: This portfolio is a demonstration of skills and does not contain proprietary data from actual clients.*
