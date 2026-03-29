@@ -1,40 +1,43 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from '../../pages/LoginPage';
+import { HomePage } from '../../pages/HomePage';
+import { env } from '../../utils/env';
+import { testData } from '../../utils/testData';
 
 test.describe('Authentication', () => {
+    let loginPage: LoginPage;
+    let homePage: HomePage;
 
     test.beforeEach(async ({ page }) => {
-        await page.goto('/');
+        homePage = new HomePage(page);
+        loginPage = new LoginPage(page);
+        await homePage.navigate();
     });
 
-    test('should load the home page', async ({ page }) => {
-        await expect(page).toHaveTitle('Automation Exercise');
-        await expect(page.getByText('Full-Fledged practice website for Automation Engineers').first()).toBeVisible();
+    test('should load the home page', async () => {
+        await expect(homePage.page).toHaveTitle(testData.homePage.title);
+        await expect(homePage.heroHeading).toBeVisible();
     });
 
-    test('should navigate to login page', async ({ page }) => {
-        await page.getByRole('link', { name: 'Signup / Login' }).click();
-        await expect(page).toHaveURL('/login');
-        await expect(page.getByRole('heading', { name: 'Login to your account' })).toBeVisible();
+    test('should navigate to login page', async () => {
+        await homePage.goToLogin();
+        await expect(loginPage.page).toHaveURL(/login/);
+        await expect(loginPage.page.getByRole('heading', {
+            name: 'Login to your account'
+        })).toBeVisible();
     });
 
-    test('should show error with invalid credential', async ({ page }) => {
-        await page.getByRole('link', { name: 'Signup / Login' }).click();
-
-        await page.locator('[data-qa="login-email"]').fill('invalid@test.com');
-        await page.locator('[data-qa="login-password"]').fill('wrongpassword');
-        await page.locator('[data-qa="login-button"]').click();
-
-        await expect(page.getByText('Your email or password is incorrect')).toBeVisible();
+    test('should show error with invalid credentials', async () => {
+        await loginPage.login(
+            testData.auth.invalidEmail,
+            testData.auth.invalidPassword
+        );
+        await expect(loginPage.errorMessage).toBeVisible();
     });
 
-    test('should login with valid credentials', async ({ page }) => {
-        await page.getByRole('link', { name: 'Signup / Login' }).click();
-
-        await page.locator('[data-qa="login-email"]').fill('testpw123@test.com');
-        await page.locator('[data-qa="login-password"]').fill('testpw123');
-        await page.locator('[data-qa="login-button"]').click();
-
-        await expect(page.getByText('Logged in as')).toBeVisible();
+    test('should login successfully with valid credentials', async () => {
+        await loginPage.login(env.LOGIN_EMAIL, env.LOGIN_PASSWORD);
+        await expect(loginPage.loggedInText).toBeVisible();
     });
 
 });
