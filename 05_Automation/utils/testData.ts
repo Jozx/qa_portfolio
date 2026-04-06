@@ -8,5 +8,12 @@ export const testData = {
     homePage: {
         title: 'Automation Exercise',
         description: 'Full-Fledged practice website for Automation Engineers'
-    }
+    },
+
+    products: {
+        searchTerm: 'dress',
+        searchHeading: 'Searched Products',
+        productsPageTitle: 'Automation Exercise',
+        productDetailUrl: 'product_details',
+    },
 }
