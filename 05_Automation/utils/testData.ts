@@ -14,6 +14,5 @@ export const testData = {
         searchTerm: 'dress',
         searchHeading: 'Searched Products',
         productsPageTitle: 'Automation Exercise',
-        productDetailUrl: 'product_details',
     },
 }
