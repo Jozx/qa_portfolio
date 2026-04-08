@@ -15,4 +15,11 @@ export const testData = {
         searchHeading: 'Searched Products',
         productsPageTitle: 'Automation Exercise',
     },
+    api: {
+        productsList: '/api/productsList',
+        brandsList: '/api/brandsList',
+        searchProduct: '/api/searchProduct',
+        verifyLogin: '/api/verifyLogin',
+        searchTerm: 'top',
+    },
 }
